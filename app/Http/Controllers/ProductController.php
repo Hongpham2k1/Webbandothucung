@@ -9,7 +9,7 @@ use App\Http\Requests;
 use Illuminate\Support\Facades\Redirect;
 use App\Models\ThemNxb;
 use App\Models\Product;
-session_start();
+session_start();    
 class ProductController extends Controller
 {
     //hien ds sp
@@ -100,4 +100,16 @@ class ProductController extends Controller
         Session::put('message','Xóa sản phẩm thành công');
         return Redirect::to('all-product');  
     }
+    //ket thuc admin page
+
+//chi tiet sp
+public function details_product($product_id){
+    $quanly_nxb = DB::table('tbl_category_product')->orderBy('category_id','desc')->get();
+    $details_product = DB::table('tbl_product')
+    ->join('tbl_category_product','tbl_category_product.category_id','=','tbl_product.category_id')
+    ->where('tbl_product.product_id', $product_id)->get();
+    
+    return view('user.show_details')->with('quanly_nxb', $quanly_nxb)->with('details_product', $details_product);
+}
+
 }

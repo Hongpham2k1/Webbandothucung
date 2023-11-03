@@ -47,7 +47,7 @@
           <div class="icon">
             <i class="ion-ios-home"></i>
           </div>
-          <a href="{{URL::to('/quanlynhaxuatban')}}" class="small-box-footer">xem danh Sách <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="{{URL::to('/quanlyloaisp')}}" class="small-box-footer">xem danh Sách <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div><!-- ./col -->
         <div class="col-lg-3 col-xs-6">

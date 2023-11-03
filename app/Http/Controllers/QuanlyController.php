@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Redirect;
+session_start();
 class QuanlyController extends Controller
 {
     //nha xuat ban 
@@ -60,5 +61,18 @@ public function xoa_lsp($category_product_id){
     Session::put('message','Xóa Nhà xuất bản thành công');
     return Redirect::to('quanlyloaisp');  
 }
+//ket thuc admin page
 
+//show danh mục nxb
+public function show_category_home($category_id){
+    $quanly_nxb = DB::table('tbl_category_product')->orderBy('category_id','desc')->get();
+    $category_by_id_km = DB::table('tbl_product')->where('khuyen_mai','1')
+    ->join('tbl_category_product','tbl_category_product.category_id','=','tbl_product.category_id')
+    ->where('tbl_product.category_id',$category_id)->get();
+    $category_by_id = DB::table('tbl_product')->where('khuyen_mai','0')
+    ->join('tbl_category_product','tbl_category_product.category_id','=','tbl_product.category_id')
+    ->where('tbl_product.category_id',$category_id)->get();
+
+    return view('user.show_category')->with('quanly_nxb', $quanly_nxb)->with('category_by_id_km',$category_by_id_km)->with('category_by_id',$category_by_id);
+}
 }

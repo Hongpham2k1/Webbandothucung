@@ -34,3 +34,32 @@ Route::post('/save-themlsp', 'QuanLyController@save_themlsp');
 Route::get('/sualsp/{category_product_id}', 'QuanLyController@sualsp');
 Route::post('/update-lsp/{category_product_id}', 'QuanLyController@update_lsp');
 Route::get('/xoa-lsp/{category_product_id}', 'QuanLyController@xoa_lsp');
+
+
+//Users
+Route::get('/','HomeController@index');
+
+Route::get('/trang-chu','HomeController@index');
+//timf kiem
+Route::post('/tim-kiem','HomeController@search');
+
+//Danh mục sản phẩm theo nhà xuat ban
+Route::get('/loai-san-pham/{category_id}','QuanlyController@show_category_home');
+
+//Chi tiet san pham
+Route::get('/chi-tiet-san-pham/{product_id}','ProductController@details_product');
+
+
+
+//checkout
+Route::get('/login-checkout','CheckoutController@login_checkout');
+Route::get('/logout-checkout','CheckoutController@logout_checkout');
+Route::post('/add-customer','CheckoutController@add_customer');
+Route::post('/order-place','CheckoutController@order_place');
+Route::post('/login-customer','CheckoutController@login_customer');
+Route::get('/checkout','CheckoutController@checkout');
+Route::get('/payment','CheckoutController@payment');
+Route::post('/save-checkout-customer','CheckoutController@save_checkout_customer');
+
+//lienhe
+Route::get('/contact','HomeController@contact');

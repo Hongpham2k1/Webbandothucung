@@ -13,7 +13,7 @@
           <i class="fa fa-angle-down pull-right"></i>
         </a>
         <ul class="treeview-menu" style="display: block;">
-          <li><a href="{{URL::to('/all-product')}}"><i class="fa fa-circle-o"></i> Quản lý Sách</a></li>
+          <li><a href="{{URL::to('/all-product')}}"><i class="fa fa-circle-o"></i> Quản lý Sản phẩm</a></li>
           <li><a href="{{URL::to('/quanlyloaisp')}}"><i class="fa fa-circle-o"></i> Quản lý Loại sản phẩm</a></li>
         <!--  <li><a href="quanlydv.php"><i class="fa fa-circle-o"></i> Quản lý dịch vụ</a></li> -->
         </ul>
