@@ -34,15 +34,17 @@
 
 <section id="cart_items">
     <div class="container">
-        <div class="breadcrumbs">
-            <ol class="breadcrumb">
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="breadcrumb">
               <li><a href="{{URL::to('/')}}">Trang chủ</a></li>
               <li class="active">Thanh toán giỏ hàng</li>
-            </ol>
+            
         </div>
 
     
     </div>
+    
     <div class="review-payment">
         <h5>Xem lại giỏ hàng</h5>
     </div>
@@ -117,8 +119,9 @@
     </div>
     </form>
 </div>
-
-
+</div>
+</div>
+</div>
 </section> <!--/#cart_items-->
 
 @endsection

@@ -69,18 +69,7 @@
         </div>
     
     </div>
-    <div class="review-payment">
-        <h2>Xem lại giỏ hàng</h2>
-    </div>
-    <div class="payment-options">
-        <span>
-            <label><input name="payment_option" value="1" type="checkbox"> Trả bằng thẻ ATM</label>
-        </span>
-        <span>
-            <label><input name="payment_option" value="2" type="checkbox"> Nhận tiền mặt</label>
-        </span>
-        
-    </div>
+    
 </div>
 <style>
     
